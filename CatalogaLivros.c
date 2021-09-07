@@ -107,7 +107,7 @@ printf("  ----------------------------------------\n\n");
 	for(i=0;i<t_aux;i++)
 	{
 		printf("  *  %s", unicos[i].autor_uni);
-		printf("\t  -  Qt. Livros: %.2f\n", conta_obra[i]);
+		printf("\t  -  Qt. Livros: %.0f\n", conta_obra[i]);
 		printf("\t  -  Média: %.2f Pág./Livro\n\n", conta_pag[i]/conta_obra[i]);
 		fflush(stdin);
 	}
