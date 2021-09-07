@@ -1,7 +1,7 @@
 /*
-	Faça um programa que cria uma estrutura chamada livro, que contém os elementos: 
-	título, autor, ano de edição, número de páginas e preço. Crie uma variável desta estrutura que é um vetor de 10 elementos. 
-	O programa deve ler os valores para a estrutura e imprimir a média do número de páginas dos livros 
+	FaÃ§a um programa que cria uma estrutura chamada livro, que contÃ©m os elementos: 
+	tÃ­tulo, autor, ano de ediÃ§Ã£o, nÃºmero de pÃ¡ginas e preÃ§o. Crie uma variÃ¡vel desta estrutura que Ã© um vetor de 10 elementos. 
+	O programa deve ler os valores para a estrutura e imprimir a mÃ©dia do nÃºmero de pÃ¡ginas dos livros 
 	e a quantidade de livros de cada autor.
 
 */
@@ -37,25 +37,25 @@ int main(){
 	struct incidencia unicos[TAMANHO];
 	
 	printf("  ----------------------------------------\n");
-	printf("\n\t<<< Catálogo de Livros >>>\n\n");
+	printf("\n\t<<< CatÃ¡logo de Livros >>>\n\n");
 		
 	for(k=0;k<TAMANHO;k++)
 	{
-		printf("  ----------------------------------------\n");	printf(" - %iº Livro.\n\n", k+1);
+		printf("  ----------------------------------------\n");	printf(" - %iÂº Livro.\n\n", k+1);
 		
-		printf("\t * Título: "); 
+		printf("\t * TÃ­tulo: "); 
 		fgets(ficha_livros[k].titulo,50,stdin);
 		
 		printf("\t * Autor: ");	
 		fgets(ficha_livros[k].autor,50,stdin);		
 		
-		printf("\t * Ano de Edição: "); 
+		printf("\t * Ano de EdiÃ§Ã£o: "); 
 		scanf("%i", &ficha_livros[k].ano_edicao);
 		
-		printf("\t * Número de Páginas: "); 
+		printf("\t * NÃºmero de PÃ¡ginas: "); 
 		scanf("%f", &ficha_livros[k].num_pag);
 		
-		printf("\t * Preço: "); 
+		printf("\t * PreÃ§o: "); 
 		scanf("%f", &ficha_livros[k].preco);
 		
 		media = media + ficha_livros[k].num_pag;
@@ -107,13 +107,13 @@ printf("  ----------------------------------------\n\n");
 	for(i=0;i<t_aux;i++)
 	{
 		printf("  *  %s", unicos[i].autor_uni);
-		printf("\t  -  Qt. Livros: %f\n", conta_obra[i]);
-		printf("\t  -  Média: %.2f Pág./Livro\n\n", conta_pag[i]/conta_obra[i]);
+		printf("\t  -  Qt. Livros: %.2f\n", conta_obra[i]);
+		printf("\t  -  MÃ©dia: %.2f PÃ¡g./Livro\n\n", conta_pag[i]/conta_obra[i]);
 		fflush(stdin);
 	}
 		
 	printf("  ----------------------------------------");
-	printf("\nMédia Total: %.2f Páginas/Livro.", media/TAMANHO);
+	printf("\nMÃ©dia Total: %.2f PÃ¡ginas/Livro.", media/TAMANHO);
 		
 	getch();
 	return 0;
